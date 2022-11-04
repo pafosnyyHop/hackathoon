@@ -1,7 +1,7 @@
 import json
 
-file_path = '/home/hello/Рабочий стол/ev.25/hakatoon/data.json'
-id_file = '/home/hello/Рабочий стол/ev.25/hakatoon/id.txt'
+file_path = '/home/hello/Рабочий стол/hakatoon/data.json'
+id_file = '/home/hello/Рабочий стол/hakatoon/id.txt'
 
 def get_data():
     with open(file_path) as file:
@@ -61,7 +61,7 @@ def update():
         return 'Nevernii id!'
 
     data_idx = data.index(tovar)
-    choice = input("Chto izmenit'?\n1 - marka\n2 - model\n3 - vipusk\n4 - opisanie\n5 - price Vvod: ")
+    choice = input("Chto izmenit'?\n1 - marka\n2 - model\n3 - vipusk\n4 - opisanie\n5 - price\nVvod: ")
     if choice.strip() == '1':
         data[data_idx]['marka'] = input('Vvedite izmeneniya: ')
     elif choice.strip() == '2':
